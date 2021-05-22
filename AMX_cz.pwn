@@ -300,7 +300,7 @@ forward CheckSAMPCACInstalled(playerid);
 public CheckSAMPCACInstalled(playerid)
 {
 	if (!CAC_GetStatus(playerid)) {
-  		SCMTAFL(-1, "{00A3C0}%s (ID:%d) has been kicked. Reason: Not installed SAMPCAC", "{00A3C0}%s (ID:%d) dostal kick. Dôvod: Nenainštalovanı SAMPCAC", gPlayerName(playerid), playerid);
+  		SCMTAFL(-1, "{00A3C0}%s (ID:%d) has been kicked. Reason: Not installed SAMPCAC", "{00A3C0}%s (ID:%d) dostal kick. DÃ´vod: NenainÅ¡talovanÃ½ SAMPCAC", gPlayerName(playerid), playerid);
 		KickPersonWithDelay(playerid);
 	}
 }
@@ -356,17 +356,17 @@ public OnPlayerConnect(playerid)
   SendClientMessage(playerid, -1, update);*/
   SetPlayerColor(playerid, teamcolor(spec));
   AntiDeAMX();
-  // lÃƒÂ©trehozunk egy ÃƒÂºj stringet, megadjuk mi legyen a szÃƒÂ¶vege majd kiiratjuk mindenkinek
+  // lÄ‚ÂƒÃ‚Â©trehozunk egy Ä‚ÂƒÃ‚ÅŸj stringet, megadjuk mi legyen a szÄ‚ÂƒÃ‚Â¶vege majd kiiratjuk mindenkinek
 
   new string[150];
   if(CAC_GetStatus(playerid)) {
   format(string, sizeof(string), "{32CD32}[+] %s (ID:%d) has connected to the server with SAMPCAC!", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{32CD32}[+] %s (ID:%d) has connected to the server with SAMPCAC!", "{32CD32}[+] %s (ID:%d) se pøipojil na server s nainstalovanym anticheatem!", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{32CD32}[+] %s (ID:%d) has connected to the server with SAMPCAC!", "{32CD32}[+] %s (ID:%d) se pÅ™ipojil na server s nainstalovanym anticheatem!", gPlayerName(playerid), playerid);
   }
   else
   {
   format(string, sizeof(string), "{32CD32}[+] %s (ID:%d) has connected to the server without SAMPCAC!", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{32CD32}[+] %s (ID:%d) has connected to the server without SAMPCAC!", "{32CD32}[+] %s (ID:%d) se pøipojil na server bez nainstalovaného anticheatu!", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{32CD32}[+] %s (ID:%d) has connected to the server without SAMPCAC!", "{32CD32}[+] %s (ID:%d) se pÅ™ipojil na server bez nainstalovanÃ©ho anticheatu!", gPlayerName(playerid), playerid);
   }
 
   hitsound[playerid] = false;
@@ -664,11 +664,11 @@ public OnGameModeInit()
   TextDrawSetSelectable(Textdraw0[i], 0);
   }
 
-  // beÃƒÂ¡llÃƒÂ­tjuk a home, away, spec csapat neveket
+  // beÄ‚ÂƒÃ‚Ë‡llÄ‚ÂƒÃ‚Â­tjuk a home, away, spec csapat neveket
   format(teamname[0],30,"%s",homename);
   format(teamname[1],30,"%s"awayname);
   format(teamname[2],30,"%s",specname);
-  //hozzÃƒÂ¡adjuk a vÃƒÂ¡laszthatÃƒÂ³ skineket
+  //hozzÄ‚ÂƒÃ‚Ë‡adjuk a vÄ‚ÂƒÃ‚Ë‡laszthatÄ‚ÂƒÃ‚Å‚ skineket
   AddPlayerClass(102, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
   AddPlayerClass(103, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
   AddPlayerClass(104, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
@@ -693,7 +693,7 @@ public OnGameModeInit()
   AddPlayerClass(154, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
   AddPlayerClass(280, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
   AddPlayerClass(233, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
-  //animÃƒÂ¡ciÃƒÂ³ a mozgÃƒÂ¡shoz
+  //animÄ‚ÂƒÃ‚Ë‡ciÄ‚ÂƒÃ‚Å‚ a mozgÄ‚ÂƒÃ‚Ë‡shoz
   UsePlayerPedAnims();
   //amit kiirjon gamemodenak a samp
   SetGameModeText("[Home] vs [Away]");
@@ -705,7 +705,7 @@ public OnGameModeInit()
 
 public OnPlayerRequestClass(playerid, classid)
 {
-  //megcsinÃƒÂ¡ljuk hogy ki lehessen vÃƒÂ¡lasztani a skint
+  //megcsinÄ‚ÂƒÃ‚Ë‡ljuk hogy ki lehessen vÄ‚ÂƒÃ‚Ë‡lasztani a skint
 	SetPlayerPos(playerid, -1211.7233, -98.9115, 40.3509);
 	SetPlayerFacingAngle(playerid, 312.6212);
 	SetPlayerCameraPos(playerid, -1207.8231, -95.5987, 41.6189);
@@ -722,7 +722,7 @@ public OnPlayerRequestSpawn(playerid)
     SendLongMessageToAll(0xAA3333FF, logged);
     KickPersonWithDelay(playerid);
   }
-  //csapatvÃƒÂ¡lasztÃƒÂ¡s dialog
+  //csapatvÄ‚ÂƒÃ‚Ë‡lasztÄ‚ÂƒÃ‚Ë‡s dialog
   new string[180];
   format(string, sizeof(string), "{00A3C0}%s\n{00A3C0}%s\n{00A3C0}%s", teamname[0], teamname[1], teamname[2]);
   ShowPlayerDialog(playerid, 1, DIALOG_STYLE_LIST, "Team Selection", string, "Select", "");
@@ -755,7 +755,7 @@ public OnTeamWonMatch(winner)
 		for(new i; i < MAX_PLAYERS; i++)
 	    {
 		if (GetPlayerLanguage(i) == LANGUAGE_CZECH)
-		SCM(i, -1, "{00A3C0}Zápas se stal remízou!");
+		SCM(i, -1, "{00A3C0}ZÃ¡pas se stal remÃ­zou!");
 		else
 		SCM(i, -1, "{00A3C0}The match has turned to be a draw!");
 		}
@@ -768,7 +768,7 @@ public OnTeamWonMatch(winner)
 		if (GetPlayerLanguage(i) == LANGUAGE_ENGLISH)
 		SCMF(i, -1, "{00A3C0}Team %s has won the match!", teamname[winner]);
 		else
-		SCMF(i, -1, "{00A3C0}Tım %s vyhral zápas!", teamname[winner]);
+		SCMF(i, -1, "{00A3C0}TÃ½m %s vyhral zÃ¡pas!", teamname[winner]);
 		}
 		}
 		for(new i; i < MAX_PLAYERS; i++)
@@ -789,7 +789,7 @@ public OnTeamWonRound(winner)
 		if (GetPlayerLanguage(i) == LANGUAGE_ENGLISH)
 		SCMF(i, -1, "{00A3C0}Team %s has won the round!", teamname[winner]);
 		else
-		SCMF(i, -1, "{00A3C0}Tım %s vyhral kolo!", teamname[winner]);
+		SCMF(i, -1, "{00A3C0}TÃ½m %s vyhral kolo!", teamname[winner]);
 		SCMF(i, -1, "{00A3C0}Roundscore: [%s] %d:%d [%s]", teamname[home], teamscore[home], teamscore[away], teamname[away]);
 		SCMF(i, -1, "{00A3C0}Totalscore: [%s] (%d) %d:%d (%d) [%s]", teamname[home], teamrounds[home], totalscore[home], totalscore[away], teamrounds[away], teamname[away]);
 		SCMF(i, -1, "{00A3C0}Round: %d", totalrounds);
@@ -850,7 +850,7 @@ public OnPlayerDeath(playerid, killerid, reason)
     {
 
         if (team[playerid] == team[killerid])
-			SCMTAFL(-1, "{00A3C0}TEAMKILL: Team %s has earned a point for themselves.", "{00A3C0}TEAMKILL: Tım %s získal bod pro sebe", teamname[oppositeTeam]);
+			SCMTAFL(-1, "{00A3C0}TEAMKILL: Team %s has earned a point for themselves.", "{00A3C0}TEAMKILL: TÃ½m %s zÃ­skal bod pro sebe", teamname[oppositeTeam]);
 
         ++teamscore[oppositeTeam];
 		++totalscore[oppositeTeam];
@@ -921,14 +921,14 @@ public OnPlayerSpawn(playerid)
   PlayerInfo[playerid][pSkin] = GetPlayerSkin(playerid);
   SetPlayerSkin(playerid, PlayerInfo[playerid][pSkin]);
   moveplayertospawn(playerid);
-  //mutassuk neki az alsÃƒÂ³ td-t
+  //mutassuk neki az alsÄ‚ÂƒÃ‚Å‚ td-t
   TextDrawShowForPlayer(playerid, Textdraw0[playerid]);
   TextDrawShowForPlayer(playerid, box);
   TextDrawShowForPlayer(playerid, FPSSzamlalo[playerid]);
   TextDrawShowForPlayer(playerid, Pingszamlalo[playerid]);
   ResetPlayerWeapons(playerid);
   updatetextdraw(playerid);
-  if (team[playerid] != spec) // ha az illetÃ…â€˜ nem spec csapatban van, adjon neki sawnot
+  if (team[playerid] != spec) // ha az illetÄ‚â€¦Ã¢â‚¬Â˜ nem spec csapatban van, adjon neki sawnot
   {
     GivePlayerWeapon(playerid, default_weapon, 5000);
     GivePlayerWeapon(playerid, default_weapon, 5000);
@@ -942,7 +942,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	{
 	    if (response)
 	    {
-		  SCML(playerid, -1, "{00A3C0}You have chosen english language.", "{00A3C0}Vybral si si èeskı jazyk.");
+		  SCML(playerid, -1, "{00A3C0}You have chosen english language.", "{00A3C0}Vybral si si ÄeskÃ½ jazyk.");
 		  if(GetPVarInt(playerid, "Logged") == 0)
 		  {
 		  new query[140];
@@ -969,7 +969,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	                if (team[i] == home)
 	                    SetPlayerColor(i, gTeamNickColors[gColorHome]);
 	                    
-                SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed team Home's color to %s.", "{00A3C0}Administrátor %s (ID:%d) zmenil farbu Home.", gPlayerName(playerid), playerid);
+                SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed team Home's color to %s.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zmenil farbu Home.", gPlayerName(playerid), playerid);
 	        }
 	        else
 	        {
@@ -979,7 +979,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	                if (team[i] == away)
 	                    SetPlayerColor(i, gTeamNickColors[gColorAway]);
 	                    
-                SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed team Away's color.", "{00A3C0}Administrátor %s (ID:%d) zmenil farbu Away.", gPlayerName(playerid), playerid);
+                SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed team Away's color.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zmenil farbu Away.", gPlayerName(playerid), playerid);
 	        }
 
 	        ForPlayers(i)
@@ -1031,7 +1031,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
     TextDrawHideForPlayer(playerid, Textdraw3);
     return 1;
 	}
-  //csapatvÃƒÂ¡lasztÃƒÂ³ dialog folytatÃƒÂ¡sa, kiiratjuk milyen cspatot vÃƒÂ¡lasztott majd a csapat spawnpointjÃƒÂ¡ra helyezzÃƒÂ¼k a playert ÃƒÂ©s megadjuk a csapatjÃƒÂ¡t
+  //csapatvÄ‚ÂƒÃ‚Ë‡lasztÄ‚ÂƒÃ‚Å‚ dialog folytatÄ‚ÂƒÃ‚Ë‡sa, kiiratjuk milyen cspatot vÄ‚ÂƒÃ‚Ë‡lasztott majd a csapat spawnpointjÄ‚ÂƒÃ‚Ë‡ra helyezzÄ‚ÂƒÃ‚Ä½k a playert Ä‚ÂƒÃ‚Â©s megadjuk a csapatjÄ‚ÂƒÃ‚Ë‡t
     if(dialogid == 1)
     {
     if(response)
@@ -1048,7 +1048,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
       SpawnPlayer(playerid);
       new string[150];
       format(string, sizeof(string), "{00A3C0}%s (ID:%d) has selected team %s", gPlayerName(playerid), playerid, teamname[team[playerid]]);
-      SCMTAFL(-1, "{00A3C0}%s (ID:%d) has selected team %s", "{00A3C0}%s (ID:%d) si vybral tım %s.", gPlayerName(playerid), playerid, teamname[team[playerid]]);
+      SCMTAFL(-1, "{00A3C0}%s (ID:%d) has selected team %s", "{00A3C0}%s (ID:%d) si vybral tÃ½m %s.", gPlayerName(playerid), playerid, teamname[team[playerid]]);
       if (team[playerid] == home)
 	   SetPlayerColor(playerid, gTeamNickColors[gColorHome]);
 	  else if (team[playerid] == away)
@@ -1106,7 +1106,7 @@ public OnPlayerCommandPerformed(playerid, cmdtext[], success)
 {
     if (!success)
     {
-       SCMFL(playerid, 0xFF0000AA, "Unknown command '%s'. Please use /cmds to get help.", "Neznámı pøíkaz '%s'. Chcete-li získat pomoc, pouijte /cmds.", cmdtext[0]);
+       SCMFL(playerid, 0xFF0000AA, "Unknown command '%s'. Please use /cmds to get help.", "NeznÃ¡mÃ½ pÅ™Ã­kaz '%s'. Chcete-li zÃ­skat pomoc, pouÅ¾ijte /cmds.", cmdtext[0]);
     }
 
 
@@ -1139,7 +1139,7 @@ public OnPlayerCommandReceived(playerid, cmdtext[])
 {
     if(GetPVarInt(playerid, "Mute") == 1)
     {
-    	SCML(playerid, -1, "{FF0000}You can't use commands, you are muted.", "Nemùete pouívat pøíkazy, jste umlèen.");
+    	SCML(playerid, -1, "{FF0000}You can't use commands, you are muted.", "NemÅ¯Å¾ete pouÅ¾Ã­vat pÅ™Ã­kazy, jste umlÄen.");
     	return 0;
     }
     return 1;
@@ -1150,33 +1150,33 @@ public CheckFPSUnlocker(playerid)
 {
 	if (GetPlayerFPS(playerid) > 105)
 	{
-		SCMTAFL(-1, "{00A3C0}%s (ID: %d) has been kicked. Reason: FPS-Unlocker", "{00A3C0}%s (ID: %d) dostal kick. Dôvod: FPS Unlocker", gPlayerName(playerid), playerid);
+		SCMTAFL(-1, "{00A3C0}%s (ID: %d) has been kicked. Reason: FPS-Unlocker", "{00A3C0}%s (ID: %d) dostal kick. DÃ´vod: FPS Unlocker", gPlayerName(playerid), playerid);
 		KickPersonWithDelay(playerid);
 	}
 }
 
 CMD:updates(playerid, params[])
 {
-    SCML(playerid, -1, "{00A3C0}Added command /updates", "{00A3C0}Pridanı príkaz /updates");
-    SCML(playerid, -1, "{00A3C0}Added command /fpsunlocker (for admins)", "{00A3C0}Pridanı príkaz /fpsunlocker (pre adminov)");
-    SCML(playerid, -1, "{00A3C0}Added command /distancebug (for admins)", "{00A3C0}Pridanı príkaz /distancebug (pre adminov)");
-    SCML(playerid, -1, "{00A3C0}Added command /spawn (for admins)", "{00A3C0}Pridanı príkaz /spawn (pre adminov)");
-    SCML(playerid, -1, "{00A3C0}Added an FPS and PING counter", "{00A3C0}Pridané poèítadlo na FPS a PING");
+    SCML(playerid, -1, "{00A3C0}Added command /updates", "{00A3C0}PridanÃ½ prÃ­kaz /updates");
+    SCML(playerid, -1, "{00A3C0}Added command /fpsunlocker (for admins)", "{00A3C0}PridanÃ½ prÃ­kaz /fpsunlocker (pre adminov)");
+    SCML(playerid, -1, "{00A3C0}Added command /distancebug (for admins)", "{00A3C0}PridanÃ½ prÃ­kaz /distancebug (pre adminov)");
+    SCML(playerid, -1, "{00A3C0}Added command /spawn (for admins)", "{00A3C0}PridanÃ½ prÃ­kaz /spawn (pre adminov)");
+    SCML(playerid, -1, "{00A3C0}Added an FPS and PING counter", "{00A3C0}PridanÃ© poÄÃ­tadlo na FPS a PING");
 	return 1;
 }
 
 CMD:fpsunlocker(playerid, params[])
 {
-	if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+	if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
 	if (fpsunlocker == true)
 	{
 	    fpsunlocker = false;
-	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has disabled FPS-Unlockers!", "{00A3C0}Administrátor %s (ID: %d) zakázal FPS-Unlocker!", gPlayerName(playerid), playerid);
+	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has disabled FPS-Unlockers!", "{00A3C0}AdministrÃ¡tor %s (ID: %d) zakÃ¡zal FPS-Unlocker!", gPlayerName(playerid), playerid);
 	}
 	else
 	{
 	    fpsunlocker = true;
-	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has enabled FPS-Unlocker!", "{00A3C0}Administrátor %s (ID: %d) povolil FPS-Unlocker!", gPlayerName(playerid), playerid);
+	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has enabled FPS-Unlocker!", "{00A3C0}AdministrÃ¡tor %s (ID: %d) povolil FPS-Unlocker!", gPlayerName(playerid), playerid);
 		ForPlayers(i)
 		SetTimerEx("CheckFPSUnlocker", 2000, false, "d", i);
 	}
@@ -1200,17 +1200,17 @@ CMD:kill(playerid, params[])
 
 CMD:spy(playerid, params[])
 {
- if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
- if (isnull(params)) return ERRORL("Usage: /spy [on | off]", "Pouít: /spy [on | off]");
+ if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
+ if (isnull(params)) return ERRORL("Usage: /spy [on | off]", "PouÅ¾Ã­t: /spy [on | off]");
  if(!strcmp(params, "on", true))
   {
 	  spy[playerid] = true;
-      SCML(playerid, -1, "{00A3C0}You see players commands/texts now.", "Teraz vidíš príkazy / text hráèov.");
+      SCML(playerid, -1, "{00A3C0}You see players commands/texts now.", "Teraz vidÃ­Å¡ prÃ­kazy / text hrÃ¡Äov.");
   }
  if(!strcmp(params, "off", true))
  {
 	  spy[playerid] = false;
-      SCML(playerid, -1, "{00A3C0}You don't see players commands/texts now.", "Príkazy a text hráèov sa teraz nezobrazujú.");
+      SCML(playerid, -1, "{00A3C0}You don't see players commands/texts now.", "PrÃ­kazy a text hrÃ¡Äov sa teraz nezobrazujÃº.");
  }
  return 1;
 }
@@ -1218,10 +1218,10 @@ CMD:spy(playerid, params[])
 CMD:defweapon(playerid, params[])
 {
   new def_weapon_id;
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
-  if(sscanf(params, "i", def_weapon_id)) return ERRORL("Usage: /defweapon [id]", "Pouít: /defweapon [id]");
-  if(!IsValidWeapon(def_weapon_id)) return ERRORL("Invalid Weapon-ID", "Nesprávne Weapon-ID");
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has set the default weapon to %s.", "{00A3C0}Administátor %s (ID:%d) nastavil vıchozí zbraò na %s.", gPlayerName(playerid), playerid, GetWeaponNameByID(def_weapon_id));
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
+  if(sscanf(params, "i", def_weapon_id)) return ERRORL("Usage: /defweapon [id]", "PouÅ¾Ã­t: /defweapon [id]");
+  if(!IsValidWeapon(def_weapon_id)) return ERRORL("Invalid Weapon-ID", "NesprÃ¡vne Weapon-ID");
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has set the default weapon to %s.", "{00A3C0}AdministÃ¡tor %s (ID:%d) nastavil vÃ½chozÃ­ zbraÅˆ na %s.", gPlayerName(playerid), playerid, GetWeaponNameByID(def_weapon_id));
   default_weapon = def_weapon_id;
   for(new i = 0; i < MAX_PLAYERS; i++)
   {
@@ -1254,7 +1254,7 @@ CMD:admins(playerid, params[])
     }
     if(!count)
     {
-        ERRORL("No administrators online", "ádní administrátoøi online");//SendClientMessage(playerid, -1, "No Admins Online at Time!");
+        ERRORL("No administrators online", "Å½Ã¡dnÃ­ administrÃ¡toÅ™i online");//SendClientMessage(playerid, -1, "No Admins Online at Time!");
     }
     return 1;
 }
@@ -1262,11 +1262,11 @@ CMD:admins(playerid, params[])
 CMD:serial(playerid, params[])
 {
   new pID;
-  if(sscanf(params,"u",pID)) return ERRORL("Usage: /serial [id]", "Pouít: /serial [id]");
-  if(sscanf(params,"u",pID)) return ERRORL("Invalid playerid", "Neplatnı playerid");
+  if(sscanf(params,"u",pID)) return ERRORL("Usage: /serial [id]", "PouÅ¾Ã­t: /serial [id]");
+  if(sscanf(params,"u",pID)) return ERRORL("Invalid playerid", "NeplatnÃ½ playerid");
   new accounts[100][MAX_PLAYER_NAME],string[256]; //change * to the maximum number of names you want to retrieve.
   SERIAL(pID,accounts);
-  if(accounts[0][0] == '\0') return ERRORL("No other accounts found.", "Nebyly nalezeny ádné další úèty.");
+  if(accounts[0][0] == '\0') return ERRORL("No other accounts found.", "Nebyly nalezeny Å¾Ã¡dnÃ© dalÅ¡Ã­ ÃºÄty.");
   for(new i; i<sizeof(accounts); i++)
   {
       if(accounts[i][0] == '\0') break;
@@ -1278,11 +1278,11 @@ CMD:serial(playerid, params[])
 CMD:aka(playerid, params[])
 {
   new pID;
-  if(sscanf(params,"u",pID)) return ERRORL("Usage: /aka [id]", "Pouít: /aka [id]");
-  if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid", "Neplatnı playerid.");
+  if(sscanf(params,"u",pID)) return ERRORL("Usage: /aka [id]", "PouÅ¾Ã­t: /aka [id]");
+  if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid", "NeplatnÃ½ playerid.");
   new accounts[100][MAX_PLAYER_NAME],string[256]; //change * to the maximum number of names you want to retrieve.
   AKA(pID,accounts);
-  if(accounts[0][0] == '\0') return ERRORL("No other accounts found.", "Nebyly nalezeny ádné další úèty.");
+  if(accounts[0][0] == '\0') return ERRORL("No other accounts found.", "Nebyly nalezeny Å¾Ã¡dnÃ© dalÅ¡Ã­ ÃºÄty.");
   for(new i; i<sizeof(accounts); i++)
   {
       if(accounts[i][0] == '\0') break;
@@ -1295,18 +1295,18 @@ CMD:skin(playerid, params[])
 {
   new i_skin;
   if (sscanf(params, "i", i_skin))
-      return ERRORL("Usage: /skin [ID]", "Pouít: /skin [id]");
+      return ERRORL("Usage: /skin [ID]", "PouÅ¾Ã­t: /skin [id]");
   if (i_skin < 0 || i_skin > 299)
       return ERRORL("Skins can be set from 0 to 299.", "Skiny lze nastavit od 0 do 299.");
   if (IsValidSkin(i_skin))
-      return ERRORL("Invalid Skin-ID.", "Nesprávne Skin-ID.");
+      return ERRORL("Invalid Skin-ID.", "NesprÃ¡vne Skin-ID.");
   /*if (score == true)
-	  return ERRORL("You can't change your skin during the CW.", "Nemôeš zmeni skin poèas CW.");*/
+	  return ERRORL("You can't change your skin during the CW.", "NemÃ´Å¾eÅ¡ zmeniÅ¥ skin poÄas CW.");*/
   SetPlayerSkin(playerid, i_skin);
   PlayerInfo[playerid][pSkin] = i_skin;
   new string[180];
   format(string, sizeof(string), "{00A3C0}You have successfully modified your skin.");
-  SCML(playerid, -1, "{00A3C0}You have successfully modified your skin.", "{00A3C0}Úspìšne si si nastavil skin.");
+  SCML(playerid, -1, "{00A3C0}You have successfully modified your skin.", "{00A3C0}ÃšspÄ›Å¡ne si si nastavil skin.");
   return 1;
 }
 
@@ -1314,19 +1314,19 @@ CMD:hitsound(playerid, params[])
 {
   hitsound[playerid] = !hitsound[playerid];
   if (hitsound[playerid])
-  SCML(playerid, -1, "{00A3C0}You have successfully enabled hitsound.", "{00A3C0}Úspìšnì jste povolili hitsound.");
+  SCML(playerid, -1, "{00A3C0}You have successfully enabled hitsound.", "{00A3C0}ÃšspÄ›Å¡nÄ› jste povolili hitsound.");
   else
-  SCML(playerid, -1, "{00A3C0}You have successfully disabled hitsound.", "{00A3C0}Úspìšnì jste deaktivovali hitsound.");
+  SCML(playerid, -1, "{00A3C0}You have successfully disabled hitsound.", "{00A3C0}ÃšspÄ›Å¡nÄ› jste deaktivovali hitsound.");
   return 1;
 }
 
 CMD:w(playerid, params[])
 {
   new worldid;
-  //if (score) return ERRORL("You can't join virtual worlds if the score is enabled.", "Pokud je skóre povoleno, nemùete se pøipojit k virtuálním svìtùm.");
-  if (sscanf(params, "i", worldid)) return ERRORL("Usage: /world [ID]", "Pouít: /world [id]");
+  //if (score) return ERRORL("You can't join virtual worlds if the score is enabled.", "Pokud je skÃ³re povoleno, nemÅ¯Å¾ete se pÅ™ipojit k virtuÃ¡lnÃ­m svÄ›tÅ¯m.");
+  if (sscanf(params, "i", worldid)) return ERRORL("Usage: /world [ID]", "PouÅ¾Ã­t: /world [id]");
   SetPlayerVirtualWorld(playerid, worldid);
-  SCMFL(playerid, -1, "{00A3C0}You have moved to VirtualWorld ID: %d", "{00A3C0}Vstoupili jste do svìta %d.", worldid);
+  SCMFL(playerid, -1, "{00A3C0}You have moved to VirtualWorld ID: %d", "{00A3C0}Vstoupili jste do svÄ›ta %d.", worldid);
   return 1;
 }
 
@@ -1337,38 +1337,38 @@ CMD:world(playerid, params[])
 
 CMD:mute(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
     new mutedid, reason[64];
-    if(sscanf(params,"uS(None)[64]", mutedid, reason)) return ERRORL("Usage: /mute [playerid] [reason]", "Pouít: /mute [id] [dùvod]");
-    if(!IsPlayerConnected(mutedid)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has muted %s (ID:%d). Reason: %s", "{00A3C0}Administrátor %s (ID:%d) byl umlèen %s (ID:%d). Dùvod: %s", gPlayerName(playerid), playerid, gPlayerName(mutedid), mutedid, reason);
+    if(sscanf(params,"uS(None)[64]", mutedid, reason)) return ERRORL("Usage: /mute [playerid] [reason]", "PouÅ¾Ã­t: /mute [id] [dÅ¯vod]");
+    if(!IsPlayerConnected(mutedid)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has muted %s (ID:%d). Reason: %s", "{00A3C0}AdministrÃ¡tor %s (ID:%d) byl umlÄen %s (ID:%d). DÅ¯vod: %s", gPlayerName(playerid), playerid, gPlayerName(mutedid), mutedid, reason);
     SetPVarInt(mutedid,"Mute",1);
     return 1;
 }
 
 CMD:unmute(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new mutedid;
-  if(sscanf(params,"u", mutedid)) return ERRORL("Usage: /unmute [playerid]", "Pouít: /unmute [id]");
-  if(!IsPlayerConnected(mutedid)) return ERRORL("Invalid playerid.", "Neplatnı playerid");
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unmuted %s (ID:%d)", "{00A3C0}Administrátor %s (ID:%d) byl odmlèen %s (ID:%d).", gPlayerName(playerid), playerid, gPlayerName(mutedid), mutedid);
+  if(sscanf(params,"u", mutedid)) return ERRORL("Usage: /unmute [playerid]", "PouÅ¾Ã­t: /unmute [id]");
+  if(!IsPlayerConnected(mutedid)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid");
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unmuted %s (ID:%d)", "{00A3C0}AdministrÃ¡tor %s (ID:%d) byl odmlÄen %s (ID:%d).", gPlayerName(playerid), playerid, gPlayerName(mutedid), mutedid);
   SetPVarInt(mutedid,"Mute",0);
   return 1;
 }
 
 CMD:distancebug(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+    if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
 	if (antidistancebug == true)
 	{
 		antidistancebug = false;
-		SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has enabled Distance-Bug!", "{00A3C0}Administrátor %s (ID: %d) zakázal Distance-Bug!", gPlayerName(playerid), playerid);
+		SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has enabled Distance-Bug!", "{00A3C0}AdministrÃ¡tor %s (ID: %d) zakÃ¡zal Distance-Bug!", gPlayerName(playerid), playerid);
 	}
 	else
 	{
 	    antidistancebug = true;
-	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has disabled Distance-Bug!", "{00A3C0}Administrátor %s (ID: %d) povolil Distance-Bug!", gPlayerName(playerid), playerid);
+	    SCMTAFL(-1, "{00A3C0}Administrator %s (ID: %d) has disabled Distance-Bug!", "{00A3C0}AdministrÃ¡tor %s (ID: %d) povolil Distance-Bug!", gPlayerName(playerid), playerid);
  	}
 	return 1;
 }
@@ -1379,9 +1379,9 @@ CMD:pm(playerid, params[])
   #define COLOR_YELLOW              0xFFFF00AA
   if(GetPVarInt(playerid, "Mute") == 1) return SendClientMessage(-1, playerid, "{FF0000}You can't use commands, you are muted.");
   new id, pmtext[144], string[100];
-  if (sscanf(params, "us[144]", id, pmtext)) return ERRORL("Usage: /pm [id] [message]", "Pouít: /pm [id] [zpráva]");//SendClientMessage(playerid, COLOR_ORANGE, "Usage: /pm <id> <message>");
-  if (!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");//SendClientMessage(playerid, COLOR_RED, "ERROR: Player not connected");
-  if (playerid == id) return ERRORL("You can't send a message to yourself.", "Nemùete si poslat zprávu sami sobì.");//SendClientMessage(playerid, COLOR_RED, "ERROR: You cannot pm yourself!");
+  if (sscanf(params, "us[144]", id, pmtext)) return ERRORL("Usage: /pm [id] [message]", "PouÅ¾Ã­t: /pm [id] [zprÃ¡va]");//SendClientMessage(playerid, COLOR_ORANGE, "Usage: /pm <id> <message>");
+  if (!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");//SendClientMessage(playerid, COLOR_RED, "ERROR: Player not connected");
+  if (playerid == id) return ERRORL("You can't send a message to yourself.", "NemÅ¯Å¾ete si poslat zprÃ¡vu sami sobÄ›.");//SendClientMessage(playerid, COLOR_RED, "ERROR: You cannot pm yourself!");
   format(string, sizeof(string), "PM >> %s (ID:%d) -> %s (ID:%d): %s", gPlayerName(playerid), playerid, gPlayerName(id), id, pmtext);
   SCMFL(playerid, COLOR_ORANGE, "PM to %s (ID:%d): %s", "PM do %s (ID:%d): %s", gPlayerName(id), id, pmtext);
   SCMFL(id, COLOR_YELLOW, "PM from %s (ID:%d): %s", "PM od %s (ID:%d): %s", gPlayerName(playerid), playerid, pmtext);
@@ -1403,12 +1403,12 @@ CMD:pm(playerid, params[])
 
 CMD:reset(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   teamscore[home] = 00;
   teamscore[away] = 00;
   new string[300];
-  format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has reset the round.", "{00A3C0}Adminisztrátor %s (ID:%d) lenullázta a kört.", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has reset the round.", "{00A3C0}Administrátor %s (ID:%d) resetnul kolo.", gPlayerName(playerid), playerid);
+  format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has reset the round.", "{00A3C0}AdminisztrÃ¡tor %s (ID:%d) lenullÃ¡zta a kÃ¶rt.", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has reset the round.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) resetnul kolo.", gPlayerName(playerid), playerid);
   for(new i; i < MAX_PLAYERS; i++)
   updatetextdraw(i);
   return 1;
@@ -1416,7 +1416,7 @@ CMD:reset(playerid, params[])
 
 CMD:resetall(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   teamrounds[home] = 00;
   teamrounds[away] = 00;
   totalscore[home] = 00;
@@ -1433,7 +1433,7 @@ CMD:resetall(playerid, params[])
   }
   new string[300];
   format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has reset everything.", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has reset everything.", "{00A3C0}Administrátor %s (ID:%d) resetnul všechno.", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has reset everything.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) resetnul vÅ¡echno.", gPlayerName(playerid), playerid);
   for(new i; i < MAX_PLAYERS; i++)
   updatetextdraw(i);
   return 1;
@@ -1441,24 +1441,24 @@ CMD:resetall(playerid, params[])
 
 CMD:spawnall(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   for(new i; i < MAX_PLAYERS; i++) {
     SpawnPlayer(i);
     SetPlayerHealth(i, 100);
   }
   new string[300];
   format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has spawned everyone.", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has spawned everyone.", "{00A3C0}Administrátor %s (ID:%d) spawnul všechny.", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has spawned everyone.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) spawnul vÅ¡echny.", gPlayerName(playerid), playerid);
   return 1;
 }
 
 CMD:spawn(playerid, params[])
 {
   new target_id;
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
-  if(sscanf(params,"u",target_id)) return ERRORL("Usage: /spawn [playerid]", "Pouít: /spawn [playerid]");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
+  if(sscanf(params,"u",target_id)) return ERRORL("Usage: /spawn [playerid]", "PouÅ¾Ã­t: /spawn [playerid]");
   SpawnPlayer(target_id);
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has respawned %s (ID: %d).", "{00A3C0}Administrátor %s (ID:%d) respawnol %s (ID:%d).", gPlayerName(playerid), playerid, gPlayerName(target_id), target_id);
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has respawned %s (ID: %d).", "{00A3C0}AdministrÃ¡tor %s (ID:%d) respawnol %s (ID:%d).", gPlayerName(playerid), playerid, gPlayerName(target_id), target_id);
   return 1;
 }
 
@@ -1482,7 +1482,7 @@ CMD:respawn(playerid, params[])
   }
   else
   {
-  ERRORL("You can't respawn now.", "Teï se nemùeš respawnout.");
+  ERRORL("You can't respawn now.", "TeÄ se nemÅ¯Å¾eÅ¡ respawnout.");
   }
   return 1;
 }
@@ -1504,19 +1504,19 @@ CMD:sync(playerid, params[])
 }
 CMD:start(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
     new id = strval(params);
     //if(id < 0 || id > 100) return ERROR("SERVER: /go [1-100]");
     if (id) {
     CountDown(id);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has started the game.", "{00A3C0}Administrátor %s (ID:%d) spustil hru.", gPlayerName(playerid), playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has started the game.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) spustil hru.", gPlayerName(playerid), playerid);
     } else {
 
     for(new i; i < MAX_PLAYERS; i++)
    	GameTextForPlayer(i, "~g~START", 1000, 5);
 
     PlayerPlaySound(playerid, 1057, 0.0, 0.0, 10.0);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has started the game.", "{00A3C0}Administrátor %s (ID:%d) spustil hru.", gPlayerName(playerid), playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has started the game.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) spustil hru.", gPlayerName(playerid), playerid);
     for(new i; i < MAX_PLAYERS; i++)
     TogglePlayerControllable(i,1);
     }
@@ -1525,8 +1525,8 @@ CMD:start(playerid, params[])
 
 CMD:stop(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has stopped the game.", "{00A3C0}Administrátor %s (ID:%d) zastavil hru.", gPlayerName(playerid), playerid);
+    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has stopped the game.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zastavil hru.", gPlayerName(playerid), playerid);
     for(new i; i < MAX_PLAYERS; i++)
     {
     if(team[i] != spec)
@@ -1542,12 +1542,12 @@ CMD:fps(playerid, params[])
 {
   	if(isnull(params))
 	{
-	SCMFL(playerid,-1,"{00A3C0}Your FPS is: %d", "{00A3C0}Vaše FPS je: %d", GetPlayerFPS(playerid));
+	SCMFL(playerid,-1,"{00A3C0}Your FPS is: %d", "{00A3C0}VaÅ¡e FPS je: %d", GetPlayerFPS(playerid));
 	return 1;
 	}
   	new pID;
-    if(sscanf(params,"u",pID)) return ERRORL("Usage: /fps [playerid]", "Pouít: /fps [id]");
-    if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
+    if(sscanf(params,"u",pID)) return ERRORL("Usage: /fps [playerid]", "PouÅ¾Ã­t: /fps [id]");
+    if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
     SCMFL(playerid, -1, "{00A3C0}FPS of %s (ID:%d) is %d", "{00A3C0}FPS z %s (ID:%d) je: %d", gPlayerName(pID), pID, GetPlayerFPS(pID));
   	return 1;
 }
@@ -1556,12 +1556,12 @@ CMD:pl(playerid, params[])
 {
   if(isnull(params))
   {
-  SCMFL(playerid,-1,"{00A3C0}Your PL is: %.2f%s","{00A3C0}Vaše PL je: %.2f%s", NetStats_PacketLossPercent(playerid), "%%");
+  SCMFL(playerid,-1,"{00A3C0}Your PL is: %.2f%s","{00A3C0}VaÅ¡e PL je: %.2f%s", NetStats_PacketLossPercent(playerid), "%%");
   return 1;
   }
   new pID;
-  if(sscanf(params,"u",pID)) return ERRORL("Usage: /pl [playerid]", "Pouít: /pl [id]");
-  if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
+  if(sscanf(params,"u",pID)) return ERRORL("Usage: /pl [playerid]", "PouÅ¾Ã­t: /pl [id]");
+  if(!IsPlayerConnected(pID)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
   SCMFL(playerid, -1, "{00A3C0}PL of %s (ID:%d) is %.2f%s", "{00A3C0}PL z %s (ID:%d) je: %.2f%s", gPlayerName(pID), pID, NetStats_PacketLossPercent(pID), "%%");
   return 1;
 }
@@ -1572,7 +1572,7 @@ CMD:info(playerid, params[])
   if (GetPlayerLanguage(playerid) == LANGUAGE_ENGLISH)
     format(string, sizeof(string), "{00A3C0}Gamemode took 2 days to write.\nHitbox: destiezk's Skinshot Hitbox\nContact: destiezk#3404");
   else if (GetPlayerLanguage(playerid) == LANGUAGE_CZECH)
-    format(string, sizeof(string), "{00A3C0}Gamemode trvalo psaní 2 dny.\nHitbox: destiezk Skinshot Hitbox\nKontakt: destiezk#3404");
+    format(string, sizeof(string), "{00A3C0}Gamemode trvalo psanÃ­ 2 dny.\nHitbox: destiezk Skinshot Hitbox\nKontakt: destiezk#3404");
   else
     format(string, sizeof(string), "{00A3C0}Invalid language");
   ShowPlayerDialog(playerid, 2, DIALOG_STYLE_MSGBOX, "Info", string, "OK", "");
@@ -1587,25 +1587,25 @@ CMD:cmds(playerid, params[])
 
 CMD:acmds(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   ShowPlayerDialog(playerid, 2, DIALOG_STYLE_MSGBOX, "Commands", "{FFFFFF}/team  /setup  /lockteams  /kick  /ban  /map  /setlevel  /teamname\n/type  /start  /stop  /mute  /unmute  /reset  /resetall\n/unban  /speconly  /defweapon  /sampcac  /teamcolor /fpsunlocker  /distancebug  /spawn", "OK", "");
   return 1;
 }
 
 CMD:sampcac(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
-  if(isnull(params)) return ERRORL("Usage: /sampcac [on | off]", "Pouít: /sampcac [on | off]");
+  if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
+  if(isnull(params)) return ERRORL("Usage: /sampcac [on | off]", "PouÅ¾Ã­t: /sampcac [on | off]");
   if(!strcmp(params, "on", true))
   {
 	  togglesampcac = true;
       SetTimerEx("CheckSAMPCACInstalled", 2000, false, "d", playerid);
-      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled SAMPCAC.", "{00A3C0}Administrátor %s (ID:%d) povolil SAMPCAC.", gPlayerName(playerid), playerid);
+      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled SAMPCAC.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) povolil SAMPCAC.", gPlayerName(playerid), playerid);
   }
   if(!strcmp(params, "off", true))
   {
 	  togglesampcac = false;
-      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled SAMPCAC.", "{00A3C0}Administrátor %s (ID:%d) zablokoval SAMPCAC.", gPlayerName(playerid), playerid);
+      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled SAMPCAC.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zablokoval SAMPCAC.", gPlayerName(playerid), playerid);
   }
   return 1;
 }
@@ -1614,10 +1614,10 @@ CMD:weather(playerid, params[])
 {
   new idojaras;
   new string[250];
-  if(sscanf(params,"i", idojaras)) return ERRORL("Usage: /weather [ID]", "Pouít: /weather [id]");
+  if(sscanf(params,"i", idojaras)) return ERRORL("Usage: /weather [ID]", "PouÅ¾Ã­t: /weather [id]");
   SetPlayerWeather(playerid, idojaras);
   format(string, sizeof(string),"{00A3C0}Weather changed. ID: %d",idojaras);
-  SCMFL(playerid, -1, "{00A3C0}Weather changed. ID: %d","{00A3C0}Poèasí se zmìnilo.. ID: %d",idojaras);
+  SCMFL(playerid, -1, "{00A3C0}Weather changed. ID: %d","{00A3C0}PoÄasÃ­ se zmÄ›nilo.. ID: %d",idojaras);
   return 1;
 }
 
@@ -1625,39 +1625,39 @@ CMD:time(playerid, params[])
 {
   new ido;
   new string[250];
-  if(sscanf(params,"i", ido)) return ERRORL("Usage: /time [ID]", "Pouít: /time [id]");
+  if(sscanf(params,"i", ido)) return ERRORL("Usage: /time [ID]", "PouÅ¾Ã­t: /time [id]");
   SetPlayerTime(playerid, ido, 0);
   format(string, sizeof(string),"{00A3C0}Time changed. ID: %d",ido);
-  SCMFL(playerid, -1, "{00A3C0}Time changed. ID: %d","{00A3C0}Èas se zmìnil. ID: %d",ido);
+  SCMFL(playerid, -1, "{00A3C0}Time changed. ID: %d","{00A3C0}ÄŒas se zmÄ›nil. ID: %d",ido);
   return 1;
 }
 
 CMD:kick(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+    if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
     new player,reason[128];
-    if(sscanf(params, "uS(None)[128]", player, reason)) return ERRORL("Usage: /kick [id] [reason]", "Pouít: /kick [id] [dùvod]");
+    if(sscanf(params, "uS(None)[128]", player, reason)) return ERRORL("Usage: /kick [id] [reason]", "PouÅ¾Ã­t: /kick [id] [dÅ¯vod]");
     new string[300];
     format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has kicked %s (ID:%d). Reason: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has kicked %s (ID:%d). Reason: %s", "{00A3C0}Administrátor %s (ID:%d) dostal kick %s (ID:%d). Dùvod: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has kicked %s (ID:%d). Reason: %s", "{00A3C0}AdministrÃ¡tor %s (ID:%d) dostal kick %s (ID:%d). DÅ¯vod: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
     KickPersonWithDelay(player);
     return 1;
 }
 
 CMD:lockteams(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new string[300];
   if (teamslocked == true)
   {
     teamslocked = false;
     format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has unlocked teams.", gPlayerName(playerid), playerid);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unlocked teams.", "{00A3C0}Administrátor %s (ID:%d) odemkl tımy.", gPlayerName(playerid), playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unlocked teams.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) odemkl tÃ½my.", gPlayerName(playerid), playerid);
   }
   else
   {
     format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has locked teams.", gPlayerName(playerid), playerid);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has locked teams.", "{00A3C0}Administrátor %s (ID:%d) zamkl tımy.", gPlayerName(playerid), playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has locked teams.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zamkl tÃ½my.", gPlayerName(playerid), playerid);
     teamslocked = true;
   }
   return 1;
@@ -1665,42 +1665,42 @@ CMD:lockteams(playerid, params[])
 
 CMD:unban(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new ip[16];
-  if(sscanf(params, "s[16]", ip)) return ERRORL("Usage: /unban [ip]", "Pouít: /unban [ip]");
+  if(sscanf(params, "s[16]", ip)) return ERRORL("Usage: /unban [ip]", "PouÅ¾Ã­t: /unban [ip]");
   new string[76];
   format(string,sizeof(string),"unbanip %s",ip);
   SendRconCommand(string);
   SendRconCommand("reloadbans");
   new string2[300];
   format(string2, sizeof(string2), "{00A3C0}Administrator %s (ID:%d) has unbanned IP %s.", gPlayerName(playerid), playerid, ip);
-  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unbanned IP %s.", "{00A3C0}Administrátor %s (ID:%d) dostal unban IP %s.", gPlayerName(playerid), playerid, ip);
+  SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has unbanned IP %s.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) dostal unban IP %s.", gPlayerName(playerid), playerid, ip);
   return 1;
 }
 
 CMD:ban(playerid, params[])
 {
-    if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+    if (PlayerInfo[playerid][Admin] < 2) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
     new player,reason[128];
-    if(sscanf(params, "uS(None)[128]", player, reason)) return ERRORL("Usage: /ban [id] [reason]", "Pouít: /ban [id] [dùvod]");
+    if(sscanf(params, "uS(None)[128]", player, reason)) return ERRORL("Usage: /ban [id] [reason]", "PouÅ¾Ã­t: /ban [id] [dÅ¯vod]");
     new string[300];
     format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has banned %s (ID:%d). Reason: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has banned %s (ID:%d). Reason: %s", "{00A3C0}Administrátor %s (ID:%d) zabanoval %s (ID:%d). Dùvod: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has banned %s (ID:%d). Reason: %s", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zabanoval %s (ID:%d). DÅ¯vod: %s", gPlayerName(playerid), playerid, gPlayerName(player), player, reason);
     BanPersonWithDelay(player);
     return 1;
 }
 
 CMD:map(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new option[10];
   new string[256];
-  if(sscanf(params, "s[20]", option)) return ERRORL("Usage: /map [air | air2 | base]", "Pouít: /map [air | air2 | base]");
+  if(sscanf(params, "s[20]", option)) return ERRORL("Usage: /map [air | air2 | base]", "PouÅ¾Ã­t: /map [air | air2 | base]");
   if(!strcmp(option, "air", true))
   {
       gamemap = sfair;
       format(string,sizeof(string), "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR.", gPlayerName(playerid), playerid);
-      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR.", "{00A3C0}Administrátor %s (ID:%d) pøepnul mapu na: SFAIR.", gPlayerName(playerid), playerid);
+      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) pÅ™epnul mapu na: SFAIR.", gPlayerName(playerid), playerid);
       for(new i; i < MAX_PLAYERS; i++)
       moveplayertospawn(i);
       return 1;
@@ -1710,7 +1710,7 @@ CMD:map(playerid, params[])
     {
       gamemap = sfair2;
       format(string,sizeof(string), "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR2.", gPlayerName(playerid), playerid);
-      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR2.", "{00A3C0}Administrátor %s (ID:%d) pøepnul mapu na: SFAIR2.", gPlayerName(playerid), playerid);
+      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to SFAIR2.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) pÅ™epnul mapu na: SFAIR2.", gPlayerName(playerid), playerid);
       for(new i; i < MAX_PLAYERS; i++)
       moveplayertospawn(i);
       return 1;
@@ -1719,7 +1719,7 @@ CMD:map(playerid, params[])
     {
       gamemap = base;
       format(string,sizeof(string), "{00A3C0}Administrator %s (ID:%d) has switched map to BASE.", gPlayerName(playerid), playerid);
-      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to BASE.", "{00A3C0}Administrátor %s (ID:%d) pøepnul mapu na: BASE.", gPlayerName(playerid), playerid);
+      SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has switched map to BASE.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) pÅ™epnul mapu na: BASE.", gPlayerName(playerid), playerid);
       for(new i; i < MAX_PLAYERS; i++)
       moveplayertospawn(i);
       return 1;
@@ -1729,10 +1729,10 @@ CMD:map(playerid, params[])
 
 CMD:team(playerid, params[])
 {
-	if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+	if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
 	new options, id, string[300];
-	if (sscanf(params, "ii", id, options)) return ERRORL("Usage: /team [playerid] [1-3] [1 - home | 2 -away | 3 - spec]", "Pouít: /team [playerid] [1-3] [1 - home | 2 -away | 3 - spec]");
-	if (!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
+	if (sscanf(params, "ii", id, options)) return ERRORL("Usage: /team [playerid] [1-3] [1 - home | 2 -away | 3 - spec]", "PouÅ¾Ã­t: /team [playerid] [1-3] [1 - home | 2 -away | 3 - spec]");
+	if (!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
 	switch(options)
 	{
 		case 1:
@@ -1769,49 +1769,49 @@ CMD:team(playerid, params[])
 		}
 	}
 	format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has moved %s (ID:%d) to team %s.", gPlayerName(playerid), playerid, gPlayerName(id), id, teamname[team[id]]);
-	SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has moved %s (ID:%d) to team %s.", "{00A3C0}Administrátor %s (ID:%d) pøesunul %s (ID:%d) do tımu %s.", gPlayerName(playerid), playerid, gPlayerName(id), id, teamname[team[id]]);
+	SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has moved %s (ID:%d) to team %s.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) pÅ™esunul %s (ID:%d) do tÃ½mu %s.", gPlayerName(playerid), playerid, gPlayerName(id), id, teamname[team[id]]);
 	return 1;
 }
 
 CMD:setlevel(playerid, params[])
 {
 	new string[300], selected, level, string2[100];
-	if(!IsPlayerAdmin(playerid)) return ERRORL("You are not allowed to use this command.", "Pro tento pøíkaz nemáte povolení.");//SendClientMessage(playerid,0xFF0000AA,"You can't use this command.");
-	if(sscanf(params,"ii",selected,level)) return ERRORL("Usage: /setlevel [playerid] [0-2]", "Pouít: /setlevel [id] [0-2]");//SCM(playerid,0xFF0000FF,"SERVER: {FFFFFF} /setlevel [ID] [0-2]");
-	if(!IsPlayerConnected(selected)) return ERRORL("Invalid playerid.", "Neplatnı playerid");
-	if(level > 2 || level < 0) return ERRORL("Usage: /setlevel [playerid] [0-2]", "Pouít: /setlevel [id] [0-2]");
+	if(!IsPlayerAdmin(playerid)) return ERRORL("You are not allowed to use this command.", "Pro tento pÅ™Ã­kaz nemÃ¡te povolenÃ­.");//SendClientMessage(playerid,0xFF0000AA,"You can't use this command.");
+	if(sscanf(params,"ii",selected,level)) return ERRORL("Usage: /setlevel [playerid] [0-2]", "PouÅ¾Ã­t: /setlevel [id] [0-2]");//SCM(playerid,0xFF0000FF,"SERVER: {FFFFFF} /setlevel [ID] [0-2]");
+	if(!IsPlayerConnected(selected)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid");
+	if(level > 2 || level < 0) return ERRORL("Usage: /setlevel [playerid] [0-2]", "PouÅ¾Ã­t: /setlevel [id] [0-2]");
 	new query[140];
 	mysql_format(Database, query, sizeof(query), "UPDATE `users` SET `Admin` = '%d' WHERE `ID` = '%d'", level, PlayerInfo[selected][ID]);
 	// We will format the query to save the player and we will use this as soon as a player disconnects.
 	mysql_tquery(Database, query); //We will execute the query.
 	format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has promoted %s (ID:%d) to Admin. (Level: %d)", gPlayerName(playerid), playerid, gPlayerName(selected), selected, level);
     format(string2, sizeof(string2), "{00A3C0}You have been promoted to Level %d Admin.", level);
-	SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has promoted %s (ID:%d) to Admin. (Level: %d)", "{00A3C0}Administrátor %s (ID:%d) povıšil %s (ID:%d) na Správche. (Level: %d)", gPlayerName(playerid), playerid, gPlayerName(selected), selected, level);
-    SCMFL(selected, -1, "{00A3C0}You have been promoted to Level %d Admin.", "{00A3C0}Byl jste povıšen na úroveò %d Správce.", level);
+	SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has promoted %s (ID:%d) to Admin. (Level: %d)", "{00A3C0}AdministrÃ¡tor %s (ID:%d) povÃ½Å¡il %s (ID:%d) na SprÃ¡vche. (Level: %d)", gPlayerName(playerid), playerid, gPlayerName(selected), selected, level);
+    SCMFL(selected, -1, "{00A3C0}You have been promoted to Level %d Admin.", "{00A3C0}Byl jste povÃ½Å¡en na ÃºroveÅˆ %d SprÃ¡vce.", level);
     PlayerInfo[selected][Admin] = level;
 	return 1;
 }
 
-CMD:class(playerid, params[]) //parancs ha beirja hogy /class akkor feldobja a csapat vÃƒÂ¡lasztÃƒÂ³ dialogot
+CMD:class(playerid, params[]) //parancs ha beirja hogy /class akkor feldobja a csapat vÄ‚ÂƒÃ‚Ë‡lasztÄ‚ÂƒÃ‚Å‚ dialogot
 {
   new string[180], allstring[90];
   format(string, sizeof(string), "%s\n%s\n{FFFF00}%s", teamname[0], teamname[1], teamname[2]);
   ShowPlayerDialog(playerid, 1, DIALOG_STYLE_LIST, "Team Selection", string, "Select", "");
   format(allstring, sizeof(allstring), "{00A3C0}%s (ID:%d) is in Class selection now.", gPlayerName(playerid), playerid);
-  SCMTAFL(-1, "{00A3C0}%s (ID:%d) is in Class selection now.", "{00A3C0}%s (ID:%d) je nyní ve vıbìru teamu.", gPlayerName(playerid), playerid);
+  SCMTAFL(-1, "{00A3C0}%s (ID:%d) is in Class selection now.", "{00A3C0}%s (ID:%d) je nynÃ­ ve vÃ½bÄ›ru teamu.", gPlayerName(playerid), playerid);
   return 1;
 }
 
 CMD:type(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new string[180];
   score = score == true ? false : true;
   format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has %s score.", gPlayerName(playerid),playerid, score == true ? ("enabled") : ("disabled"));
   if (score)
-     SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled score.", "{00A3C0}Administrátor %s (ID:%d) povoleno score.", gPlayerName(playerid),playerid);
+     SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled score.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) povoleno score.", gPlayerName(playerid),playerid);
   else
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled score.", "{00A3C0}Administrátor %s (ID:%d) zakázáno score.", gPlayerName(playerid),playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled score.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zakÃ¡zÃ¡no score.", gPlayerName(playerid),playerid);
   for(new i; i < MAX_PLAYERS; i++) {
   updatetextdraw(i);
   SetPlayerVirtualWorld(i, 0);
@@ -1822,12 +1822,12 @@ CMD:type(playerid, params[])
 CMD:speconly(playerid, params[])
 {
   #define ForCWPlayers(%0) for(new %0; %0 <= MAX_PLAYERS;%0++) if(IsPlayerConnected(%0)&&!GetPlayerVirtualWorld(%0))
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   speconly = !speconly;
   if (speconly)
-     SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled speconly.", "{00A3C0}Administrátor %s (ID:%d) povoleno speconly", gPlayerName(playerid),playerid);
+     SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has enabled speconly.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) povoleno speconly", gPlayerName(playerid),playerid);
   else
-    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled speconly.", "{00A3C0}Administrátor %s (ID:%d) zakázáno speconly", gPlayerName(playerid),playerid);
+    SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has disabled speconly.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zakÃ¡zÃ¡no speconly", gPlayerName(playerid),playerid);
   if (speconly == true)
   {
       ForCWPlayers(i)
@@ -1851,9 +1851,9 @@ CMD:speconly(playerid, params[])
 CMD:spec(playerid, params[])
 {
   new id;
-  if(sscanf(params, "d", id)) return ERRORL("Usage: /spec [id]", "Pouít: /spec [id]");
-  if(id == INVALID_PLAYER_ID) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
-  if(!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "Neplatnı playerid.");
+  if(sscanf(params, "d", id)) return ERRORL("Usage: /spec [id]", "PouÅ¾Ã­t: /spec [id]");
+  if(id == INVALID_PLAYER_ID) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
+  if(!IsPlayerConnected(id)) return ERRORL("Invalid playerid.", "NeplatnÃ½ playerid.");
   spectating[playerid] = true;
 //  if (spectating[playerid] == true) return ERROR("You are already spectating someone.");
   specplayer(playerid, id);
@@ -1863,7 +1863,7 @@ CMD:spec(playerid, params[])
 
 CMD:specoff(playerid, params[])
 {
-  if(speconly == true) return ERRORL("You can't quit spectating, spectating only mode is turned on.", "Sledování nemùete skonèit, je zapnutı reim pouze sledování.");
+  if(speconly == true) return ERRORL("You can't quit spectating, spectating only mode is turned on.", "SledovÃ¡nÃ­ nemÅ¯Å¾ete skonÄit, je zapnutÃ½ reÅ¾im pouze sledovÃ¡nÃ­.");
   TogglePlayerSpectating(playerid, 0);
   SetCameraBehindPlayer(playerid);
   spectating[playerid] = false;
@@ -1873,10 +1873,10 @@ CMD:specoff(playerid, params[])
 CMD:teamcolor(playerid, params[])
 {
     if (PlayerInfo[playerid][Admin] < 1)
-        return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+        return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
 
     if(isnull(params))
-        return ERRORL("Usage: /teamcolor [home | away]", "Pouití: /teamcolor [home | away]");
+        return ERRORL("Usage: /teamcolor [home | away]", "PouÅ¾itÃ­: /teamcolor [home | away]");
 
     if(!strcmp(params, "home", true))
     {
@@ -1888,7 +1888,7 @@ CMD:teamcolor(playerid, params[])
     }
     else
     {
-        return ERRORL("Usage: /teamcolor [home | away]", "Pouití: /teamcolor [home | away]");
+        return ERRORL("Usage: /teamcolor [home | away]", "PouÅ¾itÃ­: /teamcolor [home | away]");
     }
 
 	new caption[30];
@@ -1900,7 +1900,7 @@ CMD:teamcolor(playerid, params[])
 
 CMD:teamname(playerid, params[])
 {
-  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+  if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
   new teamx, newname[16], string[100], str[30];
   format(string, sizeof(string), "{FF0000}Usage: /teamname [1/2] [name]");
   if (sscanf(params, "is[16]", teamx, newname)) return SendClientMessage(playerid, -1, string);
@@ -1909,31 +1909,31 @@ CMD:teamname(playerid, params[])
   for(new i; i < MAX_PLAYERS; i++)
   updatetextdraw(i);
   SetGameModeText(str);
-  if(teamx == 1) SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed Green to %s.", "{00A3C0}Administrátor %s (ID:%d) zmìnil Green na %s.", gPlayerName(playerid),playerid, teamname[home]);
-  if(teamx == 2) SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed Red to %s.", "{00A3C0}Administrátor %s (ID:%d) zmìnil Red na %s.", gPlayerName(playerid),playerid, teamname[away]);
+  if(teamx == 1) SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed Green to %s.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zmÄ›nil Green na %s.", gPlayerName(playerid),playerid, teamname[home]);
+  if(teamx == 2) SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has changed Red to %s.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) zmÄ›nil Red na %s.", gPlayerName(playerid),playerid, teamname[away]);
   return 1;
 }
 
 CMD:setup(playerid, params[])
 {
-if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pøíkaz nemùete pouít, protoe vaše úroveò správce není dostateènì vysoká.");
+if (PlayerInfo[playerid][Admin] < 1) return ERRORL("You can't use this command because your admin level isn't high enough.", "Tento pÅ™Ã­kaz nemÅ¯Å¾ete pouÅ¾Ã­t, protoÅ¾e vaÅ¡e ÃºroveÅˆ sprÃ¡vce nenÃ­ dostateÄnÄ› vysokÃ¡.");
 new sroundscore;
 new srounds;
-if (sscanf(params, "ii", srounds, sroundscore)) return ERRORL("Usage: /setup [rounds] [roundscore]", "Pouít: /setup [rounds] [max score]");
-if (sroundscore < 1 || sroundscore > 9999) return ERRORL("You must set the roundscore between 1 and 9999.", "Musíte nastavit roundscore mezi 1 a 9999.");
-if (srounds < 1 || srounds > 10) return ERRORL("You must set rounds between 1 and to 10.", "Musíte nastavit kola mezi 1 a 10.");
+if (sscanf(params, "ii", srounds, sroundscore)) return ERRORL("Usage: /setup [rounds] [roundscore]", "PouÅ¾Ã­t: /setup [rounds] [max score]");
+if (sroundscore < 1 || sroundscore > 9999) return ERRORL("You must set the roundscore between 1 and 9999.", "MusÃ­te nastavit roundscore mezi 1 a 9999.");
+if (srounds < 1 || srounds > 10) return ERRORL("You must set rounds between 1 and to 10.", "MusÃ­te nastavit kola mezi 1 a 10.");
 rounds = srounds;
 roundscore = sroundscore;
 new string[300];
 format(string, sizeof(string), "{00A3C0}Administrator %s (ID:%d) has set the game up to %dx%d.", gPlayerName(playerid), playerid, rounds, roundscore);
-SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has set the game up to %dx%d.", "{00A3C0}Administrátor %s (ID:%d) nastavil hru na %dx%d.", gPlayerName(playerid), playerid, rounds, roundscore);
+SCMTAFL(-1, "{00A3C0}Administrator %s (ID:%d) has set the game up to %dx%d.", "{00A3C0}AdministrÃ¡tor %s (ID:%d) nastavil hru na %dx%d.", gPlayerName(playerid), playerid, rounds, roundscore);
 for(new i; i < MAX_PLAYERS; i++)
 	updatetextdraw(i);
 return 1;
 }
 
-//FunkciÃƒÂ³k
-moveplayertospawn(playerid) //megnÃƒÂ©zzÃƒÂ¼k milyen cspatban van, majd oda helyezzÃƒÂ¼k a spawn helyÃƒÂ©re
+//FunkciÄ‚ÂƒÃ‚Å‚k
+moveplayertospawn(playerid) //megnÄ‚ÂƒÃ‚Â©zzÄ‚ÂƒÃ‚Ä½k milyen cspatban van, majd oda helyezzÄ‚ÂƒÃ‚Ä½k a spawn helyÄ‚ÂƒÃ‚Â©re
 {
   switch(gamemap)
   {
@@ -2026,7 +2026,7 @@ updatetextdraw(playerid)
 
 main()
 {
-  printf("SAMPCAC Version: %d.%d.%d", CAC_INCLUDE_MAJOR, CAC_INCLUDE_MINOR, CAC_INCLUDE_PATCH); //kiiratjuk faszom sampcac verziÃƒÂ³jÃƒÂ¡t a serverlogba mert nem akarunk warningot
+  printf("SAMPCAC Version: %d.%d.%d", CAC_INCLUDE_MAJOR, CAC_INCLUDE_MINOR, CAC_INCLUDE_PATCH); //kiiratjuk faszom sampcac verziÄ‚ÂƒÃ‚Å‚jÄ‚ÂƒÃ‚Ë‡t a serverlogba mert nem akarunk warningot
   print("SAMP Gamemode made by destiezk | For any questions contact me: destiezk#3404");
 }
 
@@ -2039,7 +2039,7 @@ stock teamcolor(teamc)
   return color;
 }
 
-stock gPlayerName(playerid) //player nevÃƒÂ©nek lekÃƒÂ©rÃƒÂ©se funkciÃƒÂ³
+stock gPlayerName(playerid) //player nevÄ‚ÂƒÃ‚Â©nek lekÄ‚ÂƒÃ‚Â©rÄ‚ÂƒÃ‚Â©se funkciÄ‚ÂƒÃ‚Å‚
 {
 	new pnameid[24];
 	GetPlayerName(playerid,pnameid,sizeof(pnameid));
@@ -2083,7 +2083,7 @@ public OnPlayerText(playerid, text[])
 {
   if (GetPVarInt(playerid, "Mute"))
   {
-    ERRORL("{FF0000}You can't send a message, you are muted.", "{FF0000}Nemùete odeslat zprávu, jste umlèeni.");
+    ERRORL("{FF0000}You can't send a message, you are muted.", "{FF0000}NemÅ¯Å¾ete odeslat zprÃ¡vu, jste umlÄeni.");
     return 0;
   }
   if (text[0] == '#')
@@ -2160,13 +2160,13 @@ public LoadPlayer(playerid)
 		if(PlayerInfo[playerid][Admin] > 0)
 		{
 		format(string, sizeof(string), "{FF0000}Administrator %s (ID:%d) has logged in. Level: %d", gPlayerName(playerid), playerid, PlayerInfo[playerid][Admin]);
-		SCMTAFL(-1, "{FF0000}Administrator %s (ID:%d) has logged in. Level: %d", "{FF0000}Administrátor %s (ID:%d) se pøipojil. Level: %d", gPlayerName(playerid), playerid, PlayerInfo[playerid][Admin]);
-    	SCML(playerid, -1, "{00A3C0}You have successfully logged in. Welcome back!", "{00A3C0}Úspìšnì pøipojen. Vítej zpìt!");
+		SCMTAFL(-1, "{FF0000}Administrator %s (ID:%d) has logged in. Level: %d", "{FF0000}AdministrÃ¡tor %s (ID:%d) se pÅ™ipojil. Level: %d", gPlayerName(playerid), playerid, PlayerInfo[playerid][Admin]);
+    	SCML(playerid, -1, "{00A3C0}You have successfully logged in. Welcome back!", "{00A3C0}ÃšspÄ›Å¡nÄ› pÅ™ipojen. VÃ­tej zpÄ›t!");
 		}
 		else
 		{
 		format(string, sizeof(string), "{00A3C0}You have successfully logged in. Welcome back!");
-		SCML(playerid, -1, "{00A3C0}You have successfully logged in. Welcome back!", "{00A3C0}Úspìšnì pøipojen. Vítej zpìt!");
+		SCML(playerid, -1, "{00A3C0}You have successfully logged in. Welcome back!", "{00A3C0}ÃšspÄ›Å¡nÄ› pÅ™ipojen. VÃ­tej zpÄ›t!");
 		}
         return 1;
 }
